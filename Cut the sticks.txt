@@ -1,0 +1,123 @@
+#include<stdio.h>
+#include<iostream>
+#include <cstring>
+#include<math.h>
+using namespace std;
+
+
+
+int main(){
+    
+    
+long n,i,j=0,cnt1=0,cnt2=0,t=0,a,b,c=100,k=0,n1=0,n2,sav,s,e,d,score;
+    int x[2000],y[2000],z[200];
+//    string sav;
+    int min=1000,mins=1000;
+    int index;
+     
+    int sum=0;
+
+    float r=0.0;
+    
+    
+        
+//    printf("enter values");
+    scanf("%d",&n);
+    
+    
+    for(i=0;i<n;i++){
+    
+    scanf("%d",&x[i]);
+    
+        if(x[i]<min){
+            
+            min=x[i];
+            
+        }
+    
+    
+    }
+    int ind=1;
+    
+    y[0]=n;    
+
+    for(j=0;1==1;j++){
+        
+
+    for(i=0;i<n;i++){
+            
+        if(x[i]!=0){
+            
+            cnt1++;
+            
+            
+        x[i]=x[i]-min;
+        
+        if(x[i]!=0){
+            
+            score++;
+            
+            
+            if(mins>x[i]){
+            
+            
+            
+            mins=x[i];
+            
+            }
+            
+            
+            
+        }
+        
+    
+        }else{
+            
+            cnt2++;
+            
+            
+        
+            
+        }
+    }
+    
+    min=mins;
+    
+        if(y[ind-1]!=score){
+            
+                y[ind]=score;
+                
+                ind++;
+        }
+    
+    
+            if(cnt2>=n-1){
+                
+                
+                break;
+            }
+        score=0;
+        cnt1=0;
+        cnt2=0;
+
+    }
+        
+//    printf("%d ",cnt);
+
+    
+        
+    for(i=0;i<ind;i++){
+        
+
+    if(y[i]!=0 && y[i]!='\0'){
+        
+            cout<<y[i]<<"\n";
+    }
+
+
+//    scanf("%d",&x[i]);
+        
+    }
+    
+    
+}
